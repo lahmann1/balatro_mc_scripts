@@ -60,7 +60,6 @@ class Deck:
         return count
 
 
-
 class StandardDeck(Deck):
     def __init__(self):
         cards = []
@@ -85,8 +84,20 @@ class AbandonedDeck(Deck):
         super().__init__(cards)
 
 
+class CheckeredDeck(Deck):
+    def __init__(self):
+        cards = []
+        for rank in Rank:
+            cards.append(Card(rank, Suit.HEARTS))
+            cards.append(Card(rank, Suit.HEARTS))
+            cards.append(Card(rank, Suit.SPADES))
+            cards.append(Card(rank, Suit.SPADES))
+        super().__init__(cards)
+
+
 if __name__ == '__main__':
     standard_deck = StandardDeck()
     abandoned_deck = AbandonedDeck()
+    checkered_deck = CheckeredDeck()
     print(standard_deck.draw())
     ...

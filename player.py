@@ -1,8 +1,9 @@
 import matplotlib.pyplot as plt
+import addcopyfighandler
 import numpy as np
 
 from game import Game
-from deck import StandardDeck, AbandonedDeck
+from deck import StandardDeck, AbandonedDeck, CheckeredDeck
 from deck import Suit, Rank
 from hands import straights
 from probabilities import prob_to_draw_rank
